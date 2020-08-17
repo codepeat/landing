@@ -52,7 +52,10 @@ const TemplateWrapper = ({ children }) => {
           <div className="container__sidebar">
             <div className="sidebar">
               <h6 className="sidebar__title">
-                <Link to="/">{data.datoCmsSite.globalSeo.siteName}</Link>
+                <Link to="/" className="flex items-center">
+                  <img src={'/logo.png'} alt="Logo" className="logo-img" />
+                  <span className="ml-2">{data.datoCmsSite.globalSeo.siteName}</span>
+                </Link>
               </h6>
               <div
                 className="sidebar__intro"
@@ -66,7 +69,7 @@ const TemplateWrapper = ({ children }) => {
                   <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <Link to="/about">About</Link>
+                  <Link to="/about">About the company</Link>
                 </li>
               </ul>
               <p className="sidebar__social">
